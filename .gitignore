@@ -1,0 +1,61 @@
+# Gradle
+.gradle/
+build/
+out/
+classes/
+
+# Eclipse
+*.launch
+.settings/
+.metadata/
+.classpath
+.project
+bin/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+*.isg
+.idea_modules/
+
+# Visual Studio Code
+.vscode/
+.history/
+
+# Eclipse JDT LS
+.factorypath
+
+# Minecraft run directory
+run/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# Logs
+*.log
+logs/
+
+# Runtime files
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
+
+# Fabric
+.fabric/
+
+# Runtime mods
+mods/
+
+# Saves
+saves/

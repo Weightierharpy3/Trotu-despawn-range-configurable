@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "despawnconfig",
+  "version": "${version}",
+  "name": "Despawn Range Config",
+  "description": "A server-side mod that allows configuring mob despawn ranges",
+  "authors": [
+    "Trotu"
+  ],
+  "contact": {
+    "homepage": "https://github.com/Weightierharpy3",
+    "sources": "https://github.com/Weightierharpy3/Trotu-despawn-range-configurable"
+  },
+  "license": "MIT",
+  "icon": "assets/despawnconfig/icon.png",
+  "environment": "server",
+  "entrypoints": {
+    "main": [
+      "org.trotu.despawnconfig.DespawnConfig"
+    ]
+  },
+  "mixins": [
+    "despawnconfig.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.14",
+    "minecraft": "~1.21.5",
+    "java": ">=21"
+  }
+}
