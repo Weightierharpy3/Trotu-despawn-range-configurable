@@ -33,6 +33,19 @@ jobs:
         run: |
           VERSION=${GITHUB_REF#refs/tags/v}
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          
+      - name: Create lightweight JAR (without icon)
+        run: |
+          VERSION=${{ steps.get_version.outputs.version }}
+          mkdir -p temp_mod
+          cp build/libs/despawnconfig-${VERSION}.jar temp_mod/
+          cd temp_mod
+          unzip despawnconfig-${VERSION}.jar -d extracted
+          rm -rf extracted/assets/despawnconfig/icon.png
+          cd extracted
+          jar -cf ../despawnconfig-${VERSION}-light.jar .
+          cd ../..
+          cp temp_mod/despawnconfig-${VERSION}-light.jar build/libs/
 
       - name: Create GitHub Release
         id: create_release
